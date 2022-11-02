@@ -10,9 +10,12 @@ namespace HockeyManager
 {
     public class HockeyManager
     {
-        public ArrayList Attackers = new ArrayList();
-        public ArrayList Deffenders = new ArrayList();
-        public ArrayList Goalkeepers = new ArrayList();
+        public List<Goalie> Goalkeepers = new List<Goalie>();
+        public List<Forward> Attackers = new List<Forward>();
+        public List<Defender> Deffenders = new List<Defender>();
+        //public ArrayList Attackers = new ArrayList();
+        //public ArrayList Deffenders = new ArrayList();
+        //public ArrayList Goalkeepers = new ArrayList();
 
         public HockeyManager() {
         
@@ -39,10 +42,10 @@ namespace HockeyManager
             String name = "Not added";
             int age = 0;
             foreach (Goalie player in Goalkeepers) {
-                if (player.age < tmp) {
-                    tmp = player.age;
-                    name = player.name;
-                    age = player.age;
+                if (player.Age() < tmp) {
+                    tmp = player.Age();
+                    name = player.Name();
+                    age = player.Age();
                 }
             }
 

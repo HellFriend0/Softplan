@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace HockeyManager
 {
-    public class Defender
+    public class Defender : Player
     {
-        public String name;
-        public int age;
         public int hits;
 
         public Defender(string name, int age, int hits)
         {
-            this.name = name;
-            this.age = age;
+            this.SetName(name);
+            this.SetAge(age);
+            //this.name = name;
+            //this.age = age;
             this.hits = hits;
         }
     }

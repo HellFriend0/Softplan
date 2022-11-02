@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace HockeyManager
 {
-    public class Forward
+    public class Forward : Player
     {
-        public String name;
-        public int age;
         public int goals;
 
         public Forward(string name, int age, int goals)
         {
-            this.name = name;
-            this.age = age;
+            this.SetName(name);
+            this.SetAge(age);
+            //this.name = name;
+            //this.age = age;
             this.goals = goals;
         }
     }
